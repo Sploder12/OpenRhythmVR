@@ -9,13 +9,55 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{012087a6-de64-455e-8f9b-e4226a0ac652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shaders">
+      <UniqueIdentifier>{6475c151-c986-4d37-b9e4-c80883ea2a90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\washing">
+      <UniqueIdentifier>{6e493d83-0156-4991-a53b-4cd44cea5ff1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="libs\include\glad\glad.c">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\shaders.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\washing\notefield.cpp">
+      <Filter>Source Files\washing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="$(OpenXRLoaderBinaryRoot)\bin\openxr_loader.dll" />
+    <None Include="src\shaders\washingMachine.fs">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="src\shaders\washingMachine.vs">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="src\shaders\box.fs">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="src\shaders\box.vs">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libs\include\glad\glad.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\shaders.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\washing\notefield.h">
+      <Filter>Source Files\washing</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

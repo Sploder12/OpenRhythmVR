@@ -15,7 +15,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-    window = glfwCreateWindow(1080, 720, "OpenRhythm", NULL, NULL);
+    window = glfwCreateWindow(1280, 720, "OpenRhythm", NULL, NULL);
     if (window == nullptr)
     {
         std::cout << "Failed to create GLFW window\n";
