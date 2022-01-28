@@ -11,17 +11,19 @@ namespace washing
 {
 	//notes are defined by a start and end slot
 	//using a start or end beyond 0 and 59 will wrap around
-	typedef std::pair<char, char> noteSlot;
+	typedef std::pair<unsigned char, unsigned char> noteSlot;
 
 	template <class T>
 	class note
 	{
-	private:
+	protected:
 		double time;
 		noteSlot slot;
 	public:
+		note(double time, noteSlot slot) :
+			time(time), slot(slot) {}
 		
-		void draw(GLuint FBO);
+		void draw();
 
 		double getTime();
 		noteSlot getSlot();
@@ -29,17 +31,22 @@ namespace washing
 
 	class tap : public note<tap>
 	{
-		void draw(GLuint FBO);
+	public:
+		tap(double time, noteSlot slot) :
+			note<tap>(time, slot) {}
+
+		void draw();
 	};
 
-	class notefield
+	struct notefield
 	{
-	private:
-		GLuint VAO, VBO, FBO, FBOtexture;
 		std::vector<note<tap>> taps;
-	public:
+		unsigned int curTap = 0;
+
 		//default is 64 pixels for all 60 note slots, height is just divided by 3
 		notefield(glm::vec2 widthHeight = glm::vec2(3840.0f, 1280.0f));
+
+		void update(GLuint prevFBO = 0);
 
 		void draw();
 

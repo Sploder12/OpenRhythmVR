@@ -5,6 +5,9 @@
 
 #include <iostream>
 
+#include "washing/song.h"
+#include "washing/washglobals.h"
+
 GLFWwindow* window;
 
 int main()
@@ -34,8 +37,17 @@ int main()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    washing::song* tmp = washing::loadSong("songs/washing/Test/Test1/test.wsm");
+
+    const double startTime = glfwGetTime();
     while (!glfwWindowShouldClose(window))
     {
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
+        wglobals::gameTime = glfwGetTime() - startTime;
+        tmp->charts[0]->update();
+        tmp->charts[0]->draw();
 
         glfwSwapBuffers(window);
         glfwPollEvents();

@@ -32,6 +32,15 @@
     <ClCompile Include="src\washing\notefield.cpp">
       <Filter>Source Files\washing</Filter>
     </ClCompile>
+    <ClCompile Include="src\washing\washglobals.cpp">
+      <Filter>Source Files\washing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\washing\song.cpp">
+      <Filter>Source Files\washing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -48,6 +57,12 @@
     <None Include="src\shaders\box.vs">
       <Filter>Source Files\shaders</Filter>
     </None>
+    <None Include="src\shaders\texture2D.fs">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="src\shaders\texture2D.vs">
+      <Filter>Source Files\shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libs\include\glad\glad.h">
@@ -57,6 +72,15 @@
       <Filter>Source Files\util</Filter>
     </ClInclude>
     <ClInclude Include="src\washing\notefield.h">
+      <Filter>Source Files\washing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\washing\washglobals.h">
+      <Filter>Source Files\washing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\globals.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\washing\song.h">
       <Filter>Source Files\washing</Filter>
     </ClInclude>
   </ItemGroup>

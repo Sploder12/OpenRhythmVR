@@ -157,21 +157,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="libs\include\glad\glad.c" />
+    <ClCompile Include="src\globals.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\util\shaders.cpp" />
     <ClCompile Include="src\washing\notefield.cpp" />
+    <ClCompile Include="src\washing\song.cpp" />
+    <ClCompile Include="src\washing\washglobals.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="src\shaders\box.fs" />
     <None Include="src\shaders\box.vs" />
+    <None Include="src\shaders\texture2D.fs" />
+    <None Include="src\shaders\texture2D.vs" />
     <None Include="src\shaders\washingMachine.fs" />
     <None Include="src\shaders\washingMachine.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libs\include\glad\glad.h" />
+    <ClInclude Include="src\globals.h" />
     <ClInclude Include="src\util\shaders.h" />
     <ClInclude Include="src\washing\notefield.h" />
+    <ClInclude Include="src\washing\song.h" />
+    <ClInclude Include="src\washing\washglobals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

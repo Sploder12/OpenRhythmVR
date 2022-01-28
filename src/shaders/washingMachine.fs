@@ -10,7 +10,7 @@ uniform sampler2D scene;
 
 void main()
 {
-    const float r_inner=0.125; 
+    const float r_inner=0.05; 
     const float r_outer=0.5; 
 
     vec2 x = texCoords - vec2(0.5);
@@ -19,7 +19,7 @@ void main()
 
     vec2 tc_polar; // the new polar texcoords
     // map radius so that for r=r_inner -> 0 and r=r_outer -> 1
-    tc_polar.s = ( radius - r_inner) / (r_outer - r_inner);
+    tc_polar.s = (radius - r_inner) / (r_outer - r_inner);
 
     // map angle from [-PI,PI] to [0,1]
     tc_polar.t = angle * 0.5 / PI + 0.5;
@@ -30,6 +30,6 @@ void main()
     else
     {
         // texture mapping
-        FragColor = texture2D(scene, tc_polar);
+        FragColor = texture2D(scene, vec2(tc_polar.t, 1.0 - tc_polar.s));
     }
 } 
